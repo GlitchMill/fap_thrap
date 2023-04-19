@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fap Thrap!</title>
+    <link type="text/css" rel="stylesheet" href="static/index.css"/>
+  </head>
+  <body>
+    <script>
+      function reload() {
+        window.location.reload();
+      }
+    </script>
+    <h1>Fap Thrap</h1>
+    <p>Title of the video : {{ title }}</p>
+    <p>Views of the Video : {{ views }}</p>
+    <p>Categories of the Video : {{ cat }} </p>
+    <p>Tags : 
+    {% for tag in tags %}
+      {{ tag }} 
+    {% endfor %}
+    </p>
+    <p>Link to the Video : <a href="{{ link }}"> {{ title }}</a> </p>
+    <img src="{{ thumb }}" alt="Thumbnail">  </body>
+    <br>
+    <div class="button-container">
+    <button onclick="reload()" >Click to Generate Again</button>
+    </div>
+  </body>
+</html>
